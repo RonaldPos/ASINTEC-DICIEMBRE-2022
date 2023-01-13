@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="form-group mb-md" aling="center"><br>
-			<img src="../imagenes/asintec.png">
+  <img src="../imagenes/LogoAsintec.jpg"width="150" height="110">
 	</div>
 <div class="container shadow-lg p-3 mb-5 bg-body rounded">
         <div class="table-responsive">

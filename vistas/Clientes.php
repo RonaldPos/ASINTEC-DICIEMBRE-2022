@@ -70,7 +70,7 @@ if(isset($_POST['search'])){
                 
                     <i class="bi bi-cloud-arrow-down"></i>
                     <td>
-                <a href="Agregar_Cliente.php">
+                <a href="Modificar_Cliente.php">
                 <button class="btn btn-primary btn-sm" name="modifica" type="button">Modificar</button>
             </td>
                 </a>

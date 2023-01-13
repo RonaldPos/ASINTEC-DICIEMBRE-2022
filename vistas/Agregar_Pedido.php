@@ -1,6 +1,6 @@
 <?php
 include('../conexion/conectar.php');
-include('../controlador/ProductoControlador.php');
+include('../controlador/PedidoControlador.php');
 
 $obj = new pedidos();
 if($_POST){

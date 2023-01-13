@@ -31,7 +31,7 @@
 </head>
 <body>
 <div class="container shadow-lg p-1 mb-1 bg-body rounded Larger shadow border border-dark ">
-	<img src="../Asintec-master/imagenes/imagen_inv.jpg" width="1130" height="800" alt="">
+	<img src="../Asintec-master/imagenes/imagen_inv.jpg" width="950" height="600" >
 <!-- Page header -->
 <!--<div class="full-box page-header">
 				<h3 class="text-left">

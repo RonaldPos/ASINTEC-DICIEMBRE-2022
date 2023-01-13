@@ -37,7 +37,7 @@
             <tr>
                 <td class="table-primary">Descripción de Producto </td>
                 <td><input class="border border-dark  accordionform-control form-control-sm" type="text" name="Descripcion"placeholder="Digite las Caracteristicas" aria-label=".form-control-sm example"></td>
-            /tr>
+            </tr>
         </tbody>
         </table>
             <td colspan="2">
