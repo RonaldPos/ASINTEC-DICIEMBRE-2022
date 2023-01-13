@@ -1,6 +1,6 @@
 <?php
     class productos{
-                    public $idPRODUCTO;
+                    public $id;
                     public $Nombre_Producto;
                     public $Stock_Producto;
                     public $Tipo_Producto;
@@ -13,13 +13,13 @@
                         function agregar(){
                                     $conec = new conexion();
                                     $c = $conec->conectando();
-                                    $query = "select * from productos where idProducto = '$this->idProducto'";
+                                    $query = "select * from productos where id = '$this->id'";
                                         $ejecuta = mysqli_query($c, $query);
                                     if(mysqli_fetch_array($ejecuta)){
                                         echo "<script> alert('El Producto ya Existe en el Sistema')</script>";
                                     }else{
                                         $insertar = "insert into Productos value(
-                                        '$this->idProducto',
+                                        '$this->id',
                                         '$this->idProveedor',
                                         '$this->NombreProducto',
                                         '$this->CategoriaProducto',
@@ -38,13 +38,13 @@
                 function modificar(){
                             $conec = new Conexion();
                                         $c = $conec->conectando();
-                                        $query = "select * from Producto where idProducto = '$this->idProducto'";
+                                        $query = "select * from Producto where id = '$this->id'";
                                         $ejecuta = mysqli_query($c, $query);
                                     if(mysqli_fetch_array($ejecuta)){
                                         echo "<script> alert('El Producto fue modificado')</script>";
                                     }else{
                                         $update = "update Producto set 
-                                        idProducto='$obj->idProducto',
+                                        idProducto='$obj->id',
                                         idProveedor='$obj->idProveedor',
                                         NombreProducto='$obj->NombreProducto',
                                         CategoriaProducto='$obj->CategoriaProducto',
