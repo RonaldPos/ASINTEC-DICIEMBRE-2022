@@ -51,48 +51,56 @@ if($_POST){
             </tr>
             <tr>
                 <td class="table-primary">Nombres</td>
-                <td><input class=" border border-dark form-control form-control-sm" type="text" name="Nombres"placeholder="Ingrese los nombre del Usuario" aria-label=".form-control-sm example"></td>
+                <td><input class=" border border-dark form-control form-control-sm" type="text" name="Nombres"placeholder="Ingrese los nombres" aria-label=".form-control-sm example"></td>
             </tr>
             <tr>
                 <td class="table-primary">Apellidos</td>
-                <td><input class=" border border-dark form-control form-control-sm" type="text" name="Apellidos "placeholder="Ingrese Apellidos de Usuario" aria-label=".form-control-sm example"></td>
+                <td><input class=" border border-dark form-control form-control-sm" type="text" name="Apellidos "placeholder="Ingrese Apellidos" aria-label=".form-control-sm example"></td>
             </tr>
             <tr>
-                <td class="table-primary">Tipo de Usuario</td>
-                <td><input class=" border border-dark form-control form-control-sm" type="text" name="Tipo_Usuario"placeholder="Ingrese Direccion de Usuario" aria-label=".form-control-sm example"></td>
+                <td class="table-primary ">Tipo de Usuario</td>
+                <td>
+            <select class="border border-dark form-control form-control-sm" type="text" name="idDocumento" id="idDocumento">
+                <option value="value1">seleccione tipo de Usuario o Rol...</option>
+                <option value="value1">Administrador</option>
+                <option value="value1">Recepcionista</option>
+                <option value="value1">Cajero</option>
+                <option value="value1">Aux de Bodega</option>
+            </select>
+                </td>
             </tr>
             <tr>
                 <td class="table-primary">Direccion de Domicilio</td>
-                <td><input class=" border border-dark form-control form-control-sm" type="text" name="Direccion_Domicilio"placeholder="Ingrese Direccion de Usuario" aria-label=".form-control-sm example"></td>
+                <td><input class=" border border-dark form-control form-control-sm" type="text" name="Direccion de Domicilio"placeholder="Ingrese Direccion" aria-label=".form-control-sm example"></td>
             </tr>
             <tr>
                 <td class="table-primary">Numero de Contacto</td>
-                <td><input class=" border border-dark form-control form-control-sm" type="text" name="Numero_Contacto"placeholder="Ingrese Numero Telefonico del Usuario" aria-label=".form-control-sm example"></td>
+                <td><input class=" border border-dark form-control form-control-sm" type="number" name="Numero_Contacto"placeholder="Ingrese Numero Telefonico" aria-label=".form-control-sm example"></td>
             </tr>
             <tr>
                 <td class="table-primary">Numero de Documento</td>
-                <td><input class=" border border-dark form-control form-control-sm" type="text" name="Numero_Documento"placeholder="Ingrese Correo del Usuario" aria-label=".form-control-sm example"></td>
+                <td><input class=" border border-dark form-control form-control-sm" type="number" name="Numero_Documento"placeholder="Ingrese Numero de Documento" aria-label=".form-control-sm example"></td>
             </tr>
             <tr>
                 <td class="table-primary">Correo Electronico</td>
-                <td><input class=" border border-dark form-control form-control-sm" type="text" name="Correo_Electronico"placeholder="Ingrese Correo del Usuario" aria-label=".form-control-sm example"></td>
+                <td><input class=" border border-dark form-control form-control-sm" type="email" name="Correo_Electronico"placeholder="Ingrese Correo Electronico" aria-label=".form-control-sm example"></td>
             </tr>
             <tr>
-                <td class="table-primary">Inicio de Sesion</td>
+                <td class="table-primary">Username</td>
                 <td><input class="border border-dark form-control form-control-sm" type="text" name="Username"placeholder="Digite un Nombre de Usuario" aria-label=".form-control-sm example"></td>
             </tr>
             <tr>
-                <td class="table-primary">Contraseña</td>
+                <td class="table-primary">Clave_Usuario</td>
                 <td><input class="border border-dark form-control form-control-sm" type="password" name="Clave_Usuario"placeholder="Digite una Contraseña" aria-label=".form-control-sm example"></td>
             </tr>
             </tbody>
         </table>
             <td colspan="2">
                 <center>
-                    <a href="usuarios.php">
+                    <a href="Usuarios.php">
                         <button class=" btn-sm btn btn-outline-success" type="button" name="guarda">Guardar Cambios</button>
                     </a>
-                    <a href="usuarios.php">
+                    <a href="Usuarios.php">
                         <button class=" btn-sm  btn btn-outline-danger" type="button" name="salir">Cerrar</button>
                     </a>  
                 </center>

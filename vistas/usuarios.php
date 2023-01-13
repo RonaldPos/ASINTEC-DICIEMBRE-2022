@@ -3,9 +3,9 @@ include("../conexion/conectar.php");
 
 if($_POST)
 {
-$obj->idUSUARIO = $_POST['idUSUARIO'];
+$obj->id = $_POST['id'];
 }
-$conec = new Conexion();
+$conec = new conexion();
 $c = $conec->conectando();
 $query="select count(*) as totalRegistros from usuarios";
 $resultado = mysqli_query($c, $query);
@@ -27,7 +27,7 @@ $totalPaginas=ceil($totalRegistros/$maximoRegistros);
 
 if(isset($_POST['search'])){
     echo "llegue";
-    $query2="select * from usuarios where idUSUARIO like '%$obj->idUSUARIO%' limit $desde,$maximoRegistros";
+    $query2="select * from usuarios where id like '%$obj->id%' limit $desde,$maximoRegistros";
     $resultado2=mysqli_query($c,$query2);
     $arreglo2 = mysqli_fetch_array($resultado2);
 }else{
@@ -46,7 +46,7 @@ if(isset($_POST['search'])){
     <meta name="description" content="html5, css, php, jsp">
     <link rel="stylesheet" href="../configuracion/css/bootstrap.min.css">
     <link rel="stylesheet" href="../configuracion/css/font-awesome.min.css">
-    <title>Usuarios</title>
+    <title>USUARIOS</title>
     <style>
     </style>
 </head>
@@ -56,7 +56,7 @@ if(isset($_POST['search'])){
         <div class="form-group mb-mb" aling="center"><br>
         <img src="../imagenes/LogoAsintec.jpg"width="150" height="110">
     </div>
-            <h2 class="h2">Lista de Usuarios</h2>
+            <h2 class="h2">Users check list</h2>
     <form action="" name="usuarios" method="POST"> 
         <table class="table table-sm">
             <thead class="table-secondary">
@@ -78,7 +78,7 @@ if(isset($_POST['search'])){
                 </th>
                     <i class="bi bi-cloud-arrow-down"></i>
                     <td>
-                <a href="Modificar_Proveedor.php">
+                <a href="Modificar_Usuario.php">
                 <button class="btn btn-primary btn-sm" name="modifica" type="button">Modificar</button>
             </td>
                 </a>
@@ -94,7 +94,7 @@ if(isset($_POST['search'])){
             <thead class="table-warning">
             
                 <tr>
-                    <th>idUSUARIO</th>
+                    <th>id</th>
                     <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Tipo_Usuario</th>

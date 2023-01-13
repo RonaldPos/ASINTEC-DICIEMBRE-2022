@@ -2,10 +2,10 @@
 include('../conexion/conectar.php');
 include('../controlador/ProveedorControlador.php');
 
-$obj = new PROVEEDORES();
+$obj = new proveedores();
 if($_POST){
 
-    $obj->idPROVEEDORES = $_POST['idPROVEEDORES'];
+    $obj->id = $_POST['id'];
     $obj->Nombres = $_POST['Nombres'];
     $obj->Apellidos = $_POST['Apellidos'];
     $obj->Numero_Contacto = $_POST['Numero_Contacto'];

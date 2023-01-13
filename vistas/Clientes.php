@@ -56,7 +56,7 @@ if(isset($_POST['search'])){
         <div class="form-group mb-mb" aling="center"><br>
         <img src="../imagenes/LogoAsintec.jpg"width="150" height="110">
     </div>
-            <h2 class="h2">check list Clientes</h2>
+            <h2 class="h2">Customer check list</h2>
     <form action="" name="clientes" method="POST"> 
         <table class="table table-sm">
             <thead class="table-secondary">
@@ -86,14 +86,14 @@ if(isset($_POST['search'])){
             <thead class="table-warning">
             
                 <tr>
-                    <th>idCLIENTES</th>
+                    <th>id</th>
                     <th>Nombres</th>
                     <th>Apellidos</th>
-                    <th>Tipo_Documento</th>
-                    <th>Numero_Documento</th>
-                    <th>Telefono_Contacto </th>
-                    <th>Correo_Electronico</th>
-                    <th>Dirección_Residencia</th>   
+                    <th>Tipo de Documento</th>
+                    <th>Numero de Documento</th>
+                    <th>Telefono de Contacto </th>
+                    <th>Correo Electronico</th>
+                    <th>Dirección de Residencia</th>   
                 </tr>
                 <?php
                             if($arreglo2==0)

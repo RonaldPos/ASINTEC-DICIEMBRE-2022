@@ -1,6 +1,6 @@
 <?php
 
-class Conexion{
+class conexion{
                 private $servidor = "localhost";
                 private $usuario ="root";
                 private $password = "";
@@ -13,7 +13,7 @@ class Conexion{
                             return $conec;
                                             } 
                 }
-$obj = new Conexion();
+$obj = new conexion();
 if($obj->conectando()){
 // echo "conectado";
 }

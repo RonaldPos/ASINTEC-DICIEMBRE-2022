@@ -5,9 +5,9 @@ if($_POST)
 {
 $obj->idProveedor = $_POST['idProveedor'];
 }
-$conec = new Conexion();
+$conec = new conexion();
 $c = $conec->conectando();
-$query="select count(*) as totalRegistros from PROVEEDORES";
+$query="select count(*) as totalRegistros from proveedores";
 $resultado = mysqli_query($c, $query);
 $arreglo = mysqli_fetch_array($resultado); 
 $totalRegistros = $arreglo['totalRegistros'];
@@ -27,11 +27,11 @@ $totalPaginas=ceil($totalRegistros/$maximoRegistros);
 
 if(isset($_POST['search'])){
     echo "llegue";
-    $query2="select * from PROVEEDORES where idProveedor like '%$obj->idProveedor%' limit $desde,$maximoRegistros";
+    $query2="select * from proveedores where idProveedor like '%$obj->idProveedor%' limit $desde,$maximoRegistros";
     $resultado2=mysqli_query($c,$query2);
     $arreglo2 = mysqli_fetch_array($resultado2);
 }else{
-    $query2="select * from PROVEEDORES limit $desde,$maximoRegistros ";
+    $query2="select * from proveedores limit $desde,$maximoRegistros ";
     $resultado2=mysqli_query($c,$query2);
     $arreglo2 = mysqli_fetch_array($resultado2);
 }
@@ -57,7 +57,7 @@ if(isset($_POST['search'])){
         <div class="form-group mb-mb" aling="center"><br>
         <img src="../imagenes/LogoAsintec.jpg"width="150" height="110">
     </div>
-            <h2 class="h2">Lista de Proveedores</h2>
+            <h2 class="h2">Suppliers check list</h2>
     <form action="" name="proveedores" method="POST"> 
         <table class="table table-sm">
             <thead class="table-secondary">
@@ -91,7 +91,7 @@ if(isset($_POST['search'])){
         <table class="table table-sm table-striped table-hover table-bordered">
             <thead class="table-warning">
                 <tr>
-                    <th>idPROVEEDORES</th>
+                    <th>id</th>
                     <th>Nombres</th>
                     <th>Apellidos</th>
                     <th>Numero_Contacto</th>
@@ -127,7 +127,6 @@ if(isset($_POST['search'])){
                             <td><?php echo $arreglo2[6] ?></td>
                             <td><?php echo $arreglo2[7] ?></td>
                             <td><?php echo $arreglo2[8] ?></td>
-                            <td><?php echo $arreglo2[9] ?></td>
                         </tr>
                         <?php
                             }while($arreglo2 = mysqli_fetch_array($resultado2));

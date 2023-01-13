@@ -2,10 +2,10 @@
 include('../conexion/conectar.php');
 include('../controlador/ClienteControlador.php');
 
-$obj = new CLIENTES();
+$obj = new clientes();
 if($_POST){
 
-    $obj->idCLIENTES = $_POST['idCLIENTES'];
+    $obj->id = $_POST['id'];
     $obj->Nombres = $_POST['Nombres'];
     $obj->Apellidos = $_POST['Apellidos'];
     $obj->Tipo_Documento = $_POST['Tipo_Documento'];
@@ -22,7 +22,7 @@ if($_POST){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../configuracion/css/bootstrap.min.css">
-    <title>Agregar Cliente</title>
+    <title>AGREGAR CLIENTES</title>
 </head>
 <body>
       <div class="container shadow-lg p-3 mb-5 bg-body rounded Larger shadow border border-dark ">
@@ -32,11 +32,6 @@ if($_POST){
           <table class="table table-hover table-bordered">
             <tbody>
               <tr>
-                <!--<td class="table-primary ">Id Cliente</td>
-                <td><input class="border border-dark form-control form-control-sm" type="text" name="idClientes" placeholder="Codigo Asignado por el Sistema" aria-label=".form-control-sm example"></td>
-              </tr>-->
-
-              <tr>
                 <td class="table-primary">Nombres</td>
                 <td><input class=" border border-dark form-control form-control-sm" type="text" name="Nombres"placeholder="Ingrese Nombres del Cliente" aria-label=".form-control-sm example"></td>
               </tr>
@@ -45,31 +40,31 @@ if($_POST){
                 <td><input class=" border border-dark form-control form-control-sm" type="text" name="Apellidos"placeholder="Ingrese Apellidos del Cliente" aria-label=".form-control-sm example"></td>
               </tr>
               <tr>
-                <td class="table-primary ">Tipo_Documento</td>
+                <td class="table-primary ">Tipo de Documento</td>
                 <td>
-            <select class="border border-dark form-control form-control-sm" type="text" name="Tipo_Documento">
-                <option value="value1">seleccione tipo de Documento...</option>
-                <option value="value1">Cedula de Ciudania</option>
-                <option value="value1">Tarjeta de Identidad</option>
-                <option value="value1">Cedula de Extranjeria</option>
-                <option value="value1">Pasaporte</option>
-            </select>
+                    <select class="border border-dark form-control form-control-sm" type="text" name="Tipo_Documento">
+                        <option value="value1">seleccione tipo de Documento...</option>
+                        <option value="value1">Cedula de Ciudania</option>
+                        <option value="value1">Tarjeta de Identidad</option>
+                        <option value="value1">Cedula de Extranjeria</option>
+                        <option value="value1">Pasaporte</option>
+                    </select>
                 </td>
               </tr>
               <tr>
-                <td class="table-primary">Numero_Documento</td>
+                <td class="table-primary">Numero de Documento</td>
                 <td><input class="border border-dark form-control form-control-sm" type="text" name="Numero_Documento"placeholder="Ingrese Numero de documento del Cliente" aria-label=".form-control-sm example"></td>
               </tr>
               <tr>
-                <td class="table-primary">Telefono_Contacto</td>
+                <td class="table-primary">Telefono de Contacto</td>
                 <td><input class=" border border-dark form-control form-control-sm" type="text" name="Telefono_Contacto"placeholder="Ingrese Numero de Telefono del Cliente" aria-label=".form-control-sm example"></td>
               </tr>
               <tr>
-                <td class="table-primary">Correo_Electronico</td>
+                <td class="table-primary">Correo Electronico</td>
                 <td><input class=" border border-dark form-control form-control-sm" type="correo" name="Correo_Electronico"placeholder="Ingrese Correo Electronico del Cliente" aria-label=".form-control-sm example"></td>
               </tr>
               <tr>
-                <td class="table-primary">Direccion_Residencia</td>
+                <td class="table-primary">Direccion de Residencia</td>
                 <td><input class="border border-dark form-control form-control-sm" type="text" name="Direccion_Residencia"placeholder="Ingrese Direccion de Domicilio del Cliente" aria-label=".form-control-sm example"></td>
               </tr>
               

@@ -5,7 +5,7 @@ if($_POST)
 {
 $obj->idProducto = $_POST['idProducto'];
 }
-$conec = new Conexion();
+$conec = new conexion();
 $c = $conec->conectando();
 $query="select count(*) as totalRegistros from productos";
 $resultado = mysqli_query($c, $query);
@@ -45,7 +45,7 @@ if(isset($_POST['search'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="html5, css, php, jsp">
     <link rel="stylesheet" href="../configuracion/css/bootstrap.min.css">
-    <title>Productos</title>
+    <title>PRODUCTOS</title>
     <style>
     </style>
 </head>
@@ -55,7 +55,7 @@ if(isset($_POST['search'])){
         <div class="form-group mb-mb" aling="center"><br>
         <img src="../imagenes/LogoAsintec.jpg"width="150" height="110"> 
     </div>
-            <h2 class="h2">Lista de Productos</h2>
+            <h2 class="h2">Products check list</h2>
     <form action=" " name="categoria" method="POST"> 
         <table class="table table-sm">
             <thead class="table-secondary">
@@ -89,7 +89,7 @@ if(isset($_POST['search'])){
         <table class="table table-sm table-striped table-hover table-bordered">
             <thead class="table-warning">
                 <tr>
-                    <th>idProducto</th>
+                    <th>id</th>
                     <th>idProveedor</th>
                     <th>NombreProducto</th>
                     <th>CategoriaProducto</th>

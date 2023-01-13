@@ -1,6 +1,6 @@
 <?php
-include('../modelo/ProveedoresMod.php');
-$obj = new Proveedores();
+include('../modelo/Proveedoresmodelo.php');
+$obj = new proveedores();
 if($_POST){
 
     $obj->idProveedor = $_POST['idProveedor'];

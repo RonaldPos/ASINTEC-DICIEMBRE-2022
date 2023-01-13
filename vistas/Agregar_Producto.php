@@ -2,7 +2,7 @@
 include('../conexion/conectar.php');
 include('../controlador/ProductoControlador.php');
 
-$obj = new PRODUCTOS();
+$obj = new productos();
 if($_POST){
 
     $obj->idPRODUCTOS = $_POST['idPRODUCTOS'];
@@ -68,10 +68,10 @@ if($_POST){
         </table>
             <td colspan="2">
                 <center>
-                    <a href="Productos_stock.php">
+                    <a href="Productos.php">
                         <button class=" btn-sm btn btn-outline-success" type="button" name="guarda">Guardar Cambios</button>
                     </a>
-                    <a href="Productos_stock.php">
+                    <a href="Productos.php">
                         <button class=" btn-sm  btn btn-outline-danger" type="button" name="salir">Cerrar</button>
                     </a>  
                 </center>

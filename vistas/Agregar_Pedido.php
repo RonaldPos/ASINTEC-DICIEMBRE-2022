@@ -2,16 +2,16 @@
 include('../conexion/conectar.php');
 include('../controlador/ProductoControlador.php');
 
-$obj = new PEDIDOS();
+$obj = new pedidos();
 if($_POST){
 
-    $obj->idPEDIDOS = $_POST['idPEDIDOS'];
-    $obj->Tipo_Pedido = $_POST['Tipo_Pedido'];
-    $obj->Cantidad_Product = $_POST['Cantidad_Product'];
-    $obj->V_Indiv_Product = $_POST['V_Indiv_Product'];
-    $obj->V_Total_Product = $_POST['V_Total_Product'];
+    $obj->id = $_POST['id'];
+    $obj->Tipo_Producto = $_POST['Tipo_Producto'];
+    $obj->Cantidad_Productos = $_POST['Cantidad_Productos'];
+    $obj->V_Indiv_Producto = $_POST['V_Indiv_Producto'];
+    $obj->V_Total_Producto = $_POST['V_Total_Producto'];
     $obj->Fecha_Pedido = $_POST['Fecha_Pedido'];
-    $obj->DescripcionPedido = $_POST['Numero_Pedido'];
+    $obj->hora_Pedido = $_POST['hora_Pedido'];
 }
 ?>
 <!DOCTYPE html>
@@ -32,18 +32,18 @@ if($_POST){
     <table class="table table-hover table-bordered">
         <tbody>
             <tr>
-                <td class="table-primary ">Tipo_Pedido</td>
+                <td class="table-primary ">Tipo_Producto</td>
                 <td><input class="border border-dark form-control form-control-sm" type="text" name="Tipo_Pedido" placeholder="Ingrese el Tipo de Pedido" aria-label=".form-control-sm example"></td>
             </tr><tr>
-                <td class="table-primary ">Cantidad_Product</td>
+                <td class="table-primary ">Cantidad_Productos</td>
                 <td><input class="border border-dark form-control form-control-sm" type="number" name="Cantidad_Product"placeholder="Ingrese la Cantidad de Productos" aria-label=".form-control-sm example"></td>
             </tr>
             <tr>
-                <td class="table-primary">V_Indiv_Product</td>
+                <td class="table-primary">V_Indiv_Producto</td>
                 <td><input class=" border border-dark form-control form-control-sm" type="number" name="V_Indiv_Product"placeholder="Ingrese el Valor Indiv del producto" aria-label=".form-control-sm example"></td>
             </tr>
             <tr>
-                <td class="table-primary">V_Total_Product</td>
+                <td class="table-primary">V_Total_Producto</td>
                 <td><input class=" border border-dark form-control form-control-sm" type="number" name="V_Total_Product"placeholder="Ingrese el Valor Total del producto" aria-label=".form-control-sm example"></td>
             </tr>
             <tr>
@@ -51,17 +51,17 @@ if($_POST){
                 <td><input class="border border-dark  accordionform-control form-control-sm" type="date" name="Fecha_Pedido"placeholder="Digite Feacha" aria-label=".form-control-sm example"></td>
             </tr>
             <tr>
-                <td class="table-primary">Numero_Pedido</td>
-                <td><input class=" border border-dark form-control form-control-sm" type="number" name="Numero_Pedido"placeholder="Ingrese Numero de Pedido" aria-label=".form-control-sm example"></td>
+                <td class="table-primary">Hora_Pedido</td>
+                <td><input class=" border border-dark form-control form-control-sm" type="datetime" name="hora_Pedido"placeholder="Ingrese hora de Pedido" aria-label=".form-control-sm example"></td>
             </tr>
             </tbody>
         </table>
             <td colspan="2">
                 <center>
-                    <a href="Productos_stock.php">
+                    <a href="Ventas.php">
                         <button class=" btn-sm btn btn-outline-success" type="button" name="guarda">Guardar</button>
                     </a>
-                    <a href="Productos_stock.php">
+                    <a href="Ventas.php">
                         <button class=" btn-sm  btn btn-outline-danger" type="button" name="salir">Cerrar</button>
                     </a>  
                 </center>
