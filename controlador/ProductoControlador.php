@@ -3,16 +3,16 @@ include('../modelo/Productosmodelo.php');
 $obj = new productos();
 if($_POST){
 
-    $obj->idProducto = $_POST['idProducto'];
+    $obj->id = $_POST['id'];
     $obj->idProveedor = $_POST['idProveedor'];
-    $obj->NombreProducto= $_POST['NombreProducto'];
-    $obj->CategoriaProducto= $_POST['CategoriaProducto'];
-    $obj->PrecioVentaProducto = $_POST['PrecioVentaProducto'];
-    $obj->PrecioIngresoProducto = $_POST['PrecioIngresoProducto'];
-    $obj->EntradaProducto = $_POST['EntradaProducto'];
-    $obj->SalidaProducto = $_POST['SalidaProducto'];
-    $obj->CantidadProducto = $_POST['CantidadProducto'];
-    $obj->DescripcionProducto = $_POST['DescripcionProducto'];
+    $obj->Nombre_Producto= $_POST['NombreProducto'];
+    $obj->Stock_Producto= $_POST['CategoriaProducto'];
+    $obj->Tipo_Producto = $_POST['PrecioVentaProducto'];
+    $obj->Caract_Producto = $_POST['PrecioIngresoProducto'];
+    $obj->Costo_Producto_Ingreso = $_POST['EntradaProducto'];
+    $obj->Costo_Producto_Venta = $_POST['SalidaProducto'];
+    $obj->F_Fabric_Producto = $_POST['CantidadProducto'];
+    $obj->Proveedor_Producto = $_POST['DescripcionProducto'];
 
 }
     if(isset($_POST['guarda'])){

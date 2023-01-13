@@ -3,7 +3,7 @@ include('../modelo/Proveedoresmodelo.php');
 $obj = new proveedores();
 if($_POST){
 
-    $obj->idProveedor = $_POST['idProveedor'];
+    $obj->id = $_POST['id'];
     $obj->idDocumento= $_POST['idDocumento'];
     $obj->NitProveedo= $_POST['NitProveedo'];
     $obj->NombreProveedor = $_POST['NombreProveedor'];

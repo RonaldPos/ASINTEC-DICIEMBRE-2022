@@ -3,9 +3,9 @@ include('../modelo/Usuariomodelo.php');
 $obj = new usuarios();
 if($_POST){
 
-    $obj->idUSUARIO = $_POST['idUSUARIO'];
+    $obj->id = $_POST['id'];
     $obj->Nombres = $_POST['Nombres'];
-    $obj->Nombres= $_POST['Apellidos'];
+    $obj->Apellidos= $_POST['Apellidos'];
     $obj->Tipo_Usuario= $_POST['Tipo_Usuario'];
     $obj->Direccion_Domicilio = $_POST['Direccion_Domicilio'];
     $obj->Numero_Contacto = $_POST['Numero_Documento'];

@@ -3,7 +3,7 @@ include("../conexion/conectar.php");
 
 if($_POST)
 {
-$obj->idProducto = $_POST['idProducto'];
+$obj->id = $_POST['id'];
 }
 $conec = new conexion();
 $c = $conec->conectando();
@@ -27,7 +27,7 @@ $totalPaginas=ceil($totalRegistros/$maximoRegistros);
 
 if(isset($_POST['search'])){
     echo "llegue";
-    $query2="select * from productos where idProducto like '%$obj->idProducto%' limit $desde,$maximoRegistros";
+    $query2="select * from productos where id like '%$obj->id%' limit $desde,$maximoRegistros";
     $resultado2=mysqli_query($c,$query2);
     $arreglo2 = mysqli_fetch_array($resultado2);
 }else{
@@ -91,14 +91,14 @@ if(isset($_POST['search'])){
                 <tr>
                     <th>id</th>
                     <th>idProveedor</th>
-                    <th>NombreProducto</th>
-                    <th>CategoriaProducto</th>
-                    <th>PrecioVentaProducto</th>
-                    <th>PrecioIngresoProducto</th>
-                    <th>EntradaProducto</th>
-                    <th>SalidaProducto</th>
-                    <th>CantidadProducto</th>
-                    <th>DescripcionProducto</th>
+                    <th>Nombre_Producto</th>
+                    <th>Stock_Producto</th>
+                    <th>Tipo_Producto</th>
+                    <th>Caract_Producto</th>
+                    <th>Costp_Producto_Ingreso</th>
+                    <th>Costo_Producto_Venta</th>
+                    <th>F_Fabric_Producto</th>
+                    <th>Proveedor_Producto</th>
                 </tr>
                 <?php
                             if($arreglo2==0)
